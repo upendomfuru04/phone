@@ -2,8 +2,445 @@
 <html>
 <head>
 	<title>repear</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
 </head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=poppins:wght@100;300;400;500;600;&display=swap');
+*{
+	font-family: 'poppins' sans-serif;
+		margin: 0; padding: 0;
+		box-sizing: border-box;
+		outline: none; border: none;
+		text-decoration: none;
+		text-transform: capitalize;
+		transition: all .2s linear;
+
+}
+@mixin grid($val){
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($val, 1fr));	
+	gap:2rem;							
+}
+
+@mixin titleText($titleSize){
+	font-size: $titleSize;
+	text-transform: capitalize;
+	color: #334;
+}
+
+@mixin graphText($graphSize){
+	font-size: $graphSize;
+	line-height: 2;
+	color: #777;
+}
+
+
+    section{
+		padding: 5rem 10%;
+	}
+
+	html{
+		font-size: 62.6%;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+		scroll-padding-top:6rem;
+	}
+
+	html::-webkit-scrollbar{
+		width: 1rem;
+	}
+
+	html::-webkit-scrollbar-track{
+		background: #fff;
+	}
+
+	html::-webkit-scrollbar-thumb{
+		background:#d6bd70;
+		border-radius: 5rem;
+	}
+
+.header	.contact-info{
+	padding: 2rem 10%;
+	display: flex;
+	align-items: center;justify-content: space-between;
+	background: #d6bd70;
+
+}
+
+.header	.contact-info p{
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.header	.contact-info p i{
+	padding-right: .5rem;
+	color: #334;
+}
+
+
+.navbar{
+	padding: 2rem 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	border-bottom: .2rem solid #334;
+	position: relative;
+	z-index: 1000;
+}
+
+.logo{
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	color: #334;
+	font-weight: bolder;
+}
+
+.logo i{
+	color: #d6bd70;
+}
+
+.links a{
+	margin-left: 2rem;
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: #334;
+
+}
+.links a:hover{
+	text-decoration: underline;
+	color: #d6bd70;
+}
+
+#menu-btn{
+	font-size: 3rem;
+	cursor: pointer;
+	color: #334;
+	display: none;
+}
+
+.home {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap:3rem;
+}
+
+.image{
+	flex: 1 1 40rem;
+}
+
+.image img{
+	width: 100%;
+}
+
+.content{
+	flex: 1 1 40rem;
+}
+
+.content h3{
+	font-size: 4.5rem;
+	text-transform: capitalize;
+	color: #334;
+
+}
+
+.content p{
+	font-size: 1.5rem;
+	line-height: 2;
+	color: #777;
+	padding: 1rem 0;
+
+}
+.btn{
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	cursor: pointer;
+	background: #fff;
+	font-size: 1.7rem;
+	text-transform: capitalize;
+	color: #334;
+	border: .2rem solid #334;
+}
+
+.btn:hover{
+	background: #d6bd70;
+	border-color: #d6bd70;
+	color: #fff;
+
+}
+
+
+.about{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	gap:3rem;
+}
+
+.about h3{
+	padding-bottom: .5rem;
+}
+
+.heading{
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: 4rem;
+	text-transform: capitalize;
+	color: #334;
+}
+
+.heading span{
+	color: #d6bd70;
+}
+.services {
+	background: #f5f5f5;
+}
+
+.services .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));	
+	gap:2rem;
+}
+
+.box{
+	text-align: center;
+	background: #fff;
+	border: .2rem solid #334;
+	box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+	padding: 3rem 2rem;
+}
+.box:hover{
+	background: #334;
+
+}
+
+.box:hover h3{
+	color: #fff;
+	
+}
+
+.box:hover p{
+	color: #fff;
+	
+}
+
+.box img{
+	height: 7rem;
+	margin-bottom: .5rem;
+}
+
+.box h3{
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: #334;
+	padding: 1rem 0;
+
+}
+
+.box p{
+	font-size: 1.5rem;
+	line-height: 2;
+	color: #777;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+	.header .contact-info{
+		padding: 2rem 5%;
+
+	}
+
+	.navbar{
+		padding: 2rem 5%;
+	}
+	 section{
+		padding: 3rem 5%;
+	}
+}
+
+
+@media screen and (max-width: 991px){
+	html{
+		font-size: 55%;
+	}
+	.header .contact-info{
+		padding: 2rem;
+	}
+	.navbar{
+		padding: 2rem;
+	}
+	 section{
+		padding: 5rem 2rem;
+	}
+
+}
+@media screen and (max-width: 768px){
+     .header .contact-info{
+     	display: none;
+     }
+
+
+	#menu-btn{
+	display: inline-block;
+    }
+
+    .fa-times{
+      transform: rotate(180deg);
+    }
+
+    .navbar .links{
+    	position: absolute;
+    	top:99%; left: 0; right: 0;
+    	background: #fff;
+    	border-top:.2rem solid #334 ;
+    	border-bottom:.2rem solid #334 ;
+    	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+    .links.active{
+    	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+    .links a{
+    	display: block;
+    	margin: 2.5rem;
+    	font-size: 2.5rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 450px){
+	html{
+		font-size: 50%;
+	}
+
+	.home .content h3{
+		font-size: 3rem;
+	}
+
+}
+
+
+</style>
 <body>
-<h2>hello world</h2>
+<header class="header">
+	<div class="contact-info">
+		<p><i class="fas fa-map"></i>dar-es-salaam</p>
+		<p><i class="fas fa-envelope"></i>myfair@gmail.com</p>
+		<p><i class="fas fa-phone"></i>065-751-3016</p>
+	</div>
+
+	<nav class="navbar">
+		<a href="#" class="logo"><i class="fas fa-tools"></i>myfix</a>
+
+		<div class="links">
+			<a href="#home">home</a>
+			<a href="#about">about</a>
+			<a href="#services">services</a>
+			<a href="#gallery">gallery</a>
+			<a href="#team">team</a>
+			<a href="#reviews">reviews</a>
+			<a href="#contact">contact</a>	
+
+		</div>
+		<div id="menu-btn" class="fa fa-bars"></div>
+	</nav>
+</header>
+
+<section class="home" id="home">
+	<div class="image">
+		<img src="repear.jpg">
+	</div>
+	<div class="content">
+		<h3>why fix it yourself Leave it to the myfix.</h3>
+		<p>extending the life of your mashine is now easier than ever before </p>
+		<a href="#about" class="btn">get started</a>
+	</div>
+</section>
+
+
+<section class="about" id="about">
+	
+	<div class="content">
+		<h3>best quality Repeir services</h3>
+		<p>extending the life of your mashine is now easier than ever before </p>
+		<p>extending the life of your mashine is now easier than ever before </p>
+		<a href="#services" class="btn">read more</a>
+	</div>
+	<div class="image">
+		<img src="repear1.jpg">
+	</div>
+</section>
+
+
+
+
+<section class="services" id="services">
+	<h1 class="heading">our <span>services</span></h1>
+	<div class="box-container">
+		<div class="box">
+			<img src="repear2.jpg">
+			<h3>computer repairs</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img src="repear3.png">
+			<h3>laptop repair</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img src="repear4.jpg">
+			<h3>smartphone repair</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img src="repear5.jpg">
+			<h3>games console repair</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img src="repear7.jpg">
+			<h3>smartwatch repair</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	let navbar = document.querySelector('#menu-btn');
+	let navbarlinks = document.querySelector('.header .navbar .links');
+
+	menu.onclick = () =>{
+		menu.classList.toggle('fa-times');
+		navbarLinks.classList.remove('active')
+	}
+</script>
 </body>
 </html>
