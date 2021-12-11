@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"  />
   <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
 </head>
 <style>
@@ -201,7 +201,7 @@
 .heading span{
 	color: #d6bd70;
 }
-.services {
+.services{
 	background: #f5f5f5;
 }
 
@@ -211,14 +211,14 @@
 	gap:2rem;
 }
 
-.box{
+.services .box-container .box{
 	text-align: center;
 	background: #fff;
 	border: .2rem solid #334;
 	box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
 	padding: 3rem 2rem;
 }
-.box:hover{
+  .services .box-container .box:hover{
 	background: #334;
 
 }
@@ -228,29 +228,185 @@
 	
 }
 
-.box:hover p{
+.services .box-container .box:hover p{
 	color: #fff;
 	
 }
 
-.box img{
+.services .box-container .box img{
 	height: 7rem;
 	margin-bottom: .5rem;
 }
 
-.box h3{
+.services .box-container .box h3{
 	font-size: 2rem;
 	text-transform: capitalize;
 	color: #334;
-	padding: 1rem 0;
+	padding: 1    
 
 }
 
-.box p{
+.services .box-container .box p{
 	font-size: 1.5rem;
 	line-height: 2;
 	color: #777;
 }
+
+
+
+.gallery-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));	
+	gap:2rem;
+
+}
+.gallery .box{
+	height: 25rem;
+	overflow: hidden;
+
+}
+
+.gallery .box:hover img{
+	transform: scale(1.1);
+}
+
+.gallery .box img{
+	height: 100%;
+	width: 100%;
+	object-fit: co class"box"ver;
+}
+
+
+.facilities{
+  background: #f5f5f5;
+}
+.facilities .box-container{
+display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));	
+	gap:2rem;
+}
+
+.facilities .box-container .box{
+	text-align: center;
+	background: #fff;
+	border: .2rem solid #334;
+	box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+	padding: 3rem 2rem;
+}
+  .facilities .box-container .box:hover{
+	background: #334;
+
+}
+
+.box:hover h3{
+	color: #fff;
+	
+}
+
+.facilities .box-container .box:hover p{
+	color: #fff;
+	
+}
+
+.facilities .box-container .box img{
+	height: 7rem;
+	margin-bottom: .5rem;
+}
+
+.facilities .box-container .box h3{
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: #334;
+	padding: 1    
+
+}
+
+.facilities .box-container .box p{
+	font-size: 1.5rem;
+	line-height: 2;
+	color: #777;
+}
+
+
+
+.team .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));	
+	gap:2rem;
+	align-items: flex-start;
+}
+
+.team .box-container .box{
+	overflow: hidden;
+	text-align: center;
+}
+.team .box-container .box:hover .content:hover{
+		margin-bottom: 0;
+}
+
+
+.team .box-container .box img{
+	width: 100%;
+}
+
+
+
+.team .box-container .box .content{
+	padding: 2rem;
+	margin-bottom: -7rem;
+}
+
+.team .box-container .box .content h3{
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: #334;
+}
+
+.team .box-container .box .content p{
+	font-size: 1.4rem;
+	line-height: 2;
+	color: #777;
+	padding: .5rem 0;
+}
+
+
+.share{
+	margin-top: 1.5rem;
+}
+
+.share a{
+	height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    margin: 0  .3rem;
+    background: #334;
+    color: #fff;
+}
+
+.share a:hover{
+	background: #d6bd70;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -393,7 +549,7 @@
 	<div class="box-container">
 		<div class="box">
 			<img src="repear2.jpg">
-			<h3>computer repairs</h3>
+			<h3>computer repair</h3>
 			<p>extending the life of your mashine is now easier than ever before </p>
 		</div>
 		<div class="box">
@@ -421,6 +577,102 @@
 
 
 
+<section class="gallery" id="gallery">
+	<h1 class="heading">our <span>gallery</span></h1>
+	<div class="gallery-container">
+		<a class="box" href="repear12.jpg"><img src="repear12.jpg"></a>
+		<a class="box" href="repear9.jpg"><img src="repear9.jpg"></a>
+		<a class="box" href="repear.jpg"><img src="repear.jpg"></a>
+		<a class="box" href="repear11.jpg"><img style="width:89%" src="repear11.jpg"></a>
+		<a class="box" href="repear12.jpg"><img  src="repear12.jpg"></a>
+		<a class="box" href="repear1.jpg"><img style="width:89%" src="repear1.jpg"></a>
+		<a class="box" href="repear9.jpg"><img src="repear9.jpg"></a>
+		<a class="box" href="repear12.jpg"><img src="repear12.jpg"></a>
+
+	</div>
+</section>
+
+
+<section class="facilities">
+	<h1 class="heading">why <span>choose us?</span></h1>
+	<div class="box-container">
+		<div class="box">
+			<img src="repear13.jpg">
+			<h3>24/7 support</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img src="repear14.png">
+			<h3>quality service</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+		<div class="box">
+			<img style="width:35%" src="repear15.jpg">
+			<h3>quick repair</h3>
+			<p>extending the life of your mashine is now easier than ever before </p>
+		</div>
+	</div>
+</section>
+  <section class="team" id="team">
+  		<h1 class="heading">our expert <span>team</span></h1>
+  	<div class="box-container">
+		<div class="box">
+			<img src="g.jpg">
+		    <div class="content">
+			  <h3>gaston ngailo</h3>
+			  <p>electronic expert</p>
+			   <div class="share">
+				  <a href="#" class="fab fa-facebook"></a>
+				  <a href="#" class="fab fa-twitter"></a>
+				  <a href="#" class="fab fa-instagram"></a>
+				  <a href="#" class="fab fa-linkedin"></a>
+			   </div>
+		    </div>
+	    </div>
+		<div class="box">
+			<img src="g.jpg">
+		    <div class="content">
+			  <h3>gaston ngailo</h3>
+			  <p>electronic expert</p>
+			   <div class="share">
+				  <a href="#" class="fab fa-facebook"></a>
+				  <a href="#" class="fab fa-twitter"></a>
+				  <a href="#" class="fab fa-instagram"></a>
+				  <a href="#" class="fab fa-linkedin"></a>
+			   </div>
+		    </div>
+	    </div>
+		<div class="box">
+			<img src="g.jpg">
+		    <div class="content">
+			  <h3>gaston ngailo</h3>
+			  <p>electronic expert</p>
+			   <div class="share">
+				  <a href="#" class="fab fa-facebook"></a>
+				  <a href="#" class="fab fa-twitter"></a>
+				  <a href="#" class="fab fa-instagram"></a>
+				  <a href="#" class="fab fa-linkedin"></a>
+			   </div>
+		    </div>
+	    </div>
+	    <div class="box">
+			<img src="g.jpg">
+		    <div class="content">
+			  <h3>gaston ngailo</h3>
+			  <p>electronic expert</p>
+			   <div class="share">
+				  <a href="#" class="fab fa-facebook"></a>
+				  <a href="#" class="fab fa-twitter"></a>
+				  <a href="#" class="fab fa-instagram"></a>
+				  <a href="#" class="fab fa-linkedin"></a>
+			   </div>
+		    </div>
+	    </div>
+	</div>
+
+
+  	
+  </section>
 
 
 
@@ -430,6 +682,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
 
 
@@ -441,6 +708,13 @@
 		menu.classList.toggle('fa-times');
 		navbarLinks.classList.remove('active')
 	}
+
+     lightGallery(document.querySelector('.gallery .gallery-container'));
+
+
+
+
+
 </script>
 </body>
 </html>
